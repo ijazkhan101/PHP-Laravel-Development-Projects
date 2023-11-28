@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class NoteController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *
@@ -20,7 +21,6 @@ class NoteController extends Controller
         return view('notes.index')->with('notes', $notes);
     }
 
-    
     /**
      * Show the form for creating a new resource.
      *
