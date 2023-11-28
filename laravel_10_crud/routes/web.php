@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DemoController;
+use App\Http\Controllers\PhotoController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +15,33 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [DemoController::class , 'index']);
+Route::resource('photo',PhotoController::class);
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/home', function () {
+    return view('home');
 });
+
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+
+Route::get('/{name?}', function ($name = null) {
+    $data = compact('name');
+    return view('newpage')->with($data);
+});
+
+
+
+Route::get('/demo', function () {
+   echo 'hello world';
+});
+
+Route::get('/laravel', function () {
+    return view('demo');
+ });
+Route::post('/test', function () {
+    echo 'testing the route';
+ });
