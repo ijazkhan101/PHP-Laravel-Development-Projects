@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\PhotoController;
-
+use App\Http\Controllers\RegistrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +18,11 @@ use App\Http\Controllers\PhotoController;
 Route::get('/', [DemoController::class , 'index']);
 Route::resource('photo',PhotoController::class);
 
+// from routes
+Route::get('/register',[RegistrationController::class , 'index']);
+Route::post('/register',[RegistrationController::class , 'register']);
+
+// end of from routes
 Route::get('/home', function () {
     return view('home');
 });
