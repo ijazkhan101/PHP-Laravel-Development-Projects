@@ -12,18 +12,13 @@
 
 <form action="{{url('/')}}/register" method="post">
     @csrf
-    <div class="form-group">
-      <label for="exampleInputEmail1">Name</label>
-      <input type="text" class="form-control" name='name' id="text"  placeholder="Enter name">
+    <div class="container">
+        <x-input type="text" name="name" label="Please enter your name"/>
+        <x-input type="email" name="emil" label="Please enter your email"/>
+        <x-input type="password" name="password" label="Please enter your password"/>
+
     </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Email</label>
-      <input type="email" class="form-control" name='email' id="email" placeholder="Email">
-    </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" name='password' id="password" placeholder="password">
-      </div>
+    
    
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>

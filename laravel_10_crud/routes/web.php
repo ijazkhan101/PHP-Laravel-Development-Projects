@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\CustomerController;
+use  App\Models\Customer;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,14 @@ use App\Http\Controllers\RegistrationController;
 */
 Route::get('/', [DemoController::class , 'index']);
 Route::resource('photo',PhotoController::class);
+
+
+// insert query Route 
+
+Route::get('/customer',[CustomerController::class,'index']);
+
+Route::post('/customer',[CustomerController::class,'store']);
+
 
 // from routes
 Route::get('/register',[RegistrationController::class , 'index']);
