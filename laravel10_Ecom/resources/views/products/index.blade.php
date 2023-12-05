@@ -44,14 +44,23 @@
         </div>
     </div>
 
-    <div class="row mt-5">
-        <div class="col-md-12">
-            <h3>Product Description</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+
+</div>
+ <!-- Add this in the body section of your HTML file -->
+ <footer class="footer bg-dark text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Add your footer content here -->
+                <p>&copy; 2023 Your E-Commerce App</p>
+            </div>
+            <div class="col-md-6 text-right">
+                <!-- Add additional footer content or links here -->
+            </div>
         </div>
     </div>
-</div>
-
+</footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
